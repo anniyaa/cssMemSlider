@@ -1,19 +1,22 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #FEE3EC;
-    color: #F2789F;
+    background-color: #EED7CE;
+    color: #FF87CA;
+}
+h1 {
+
 }
 
 img {
-    height: 90%;
+    height: 100%;
     width: 100%;
 }
 
 .wrapper-container {
-    width: 70%;
+    width: 50%;
     height: 50%;
-    background-color: #F9C5D5;
+    background-color: #EAEAEA;
     margin: 10% auto;
     overflow: hidden;
 }
@@ -25,13 +28,58 @@ img {
 
 .slides {
     display: flex;
-    height: 80%;
     width: 400%;
+    height: 90%;
 }
 .slide {
     width: 25%;
+    transition: all 0.7s ease;
 }
 
 input {
     display: none;
+}
+.nav-and-text-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 10%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.text-container {
+    display: flex;
+    width: 800%;
+    align-items: center;
+    padding-left: 10%;
+}
+.text {
+    width: 25%;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #FFC4E1;
+}
+
+#input-1:checked ~ .slides>.slide1,#input-1:checked ~ .nav-and-text-container>.text-container>.text1 {
+    margin-left: 0;
+}
+#input-2:checked ~ .slides>.slide1,#input-2:checked ~ .nav-and-text-container>.text-container>.text1 {
+    margin-left: -25%;
+}
+#input-3:checked ~ .slides>.slide1,#input-3:checked ~ .nav-and-text-container>.text-container>.text1 {
+    margin-left: -50%;
+}
+
+#input-4:checked ~ .slides>.slide1,#input-4:checked ~ .nav-and-text-container>.text-container>.text1 {
+    margin-left: -75%;
 }
