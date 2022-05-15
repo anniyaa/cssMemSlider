@@ -22,9 +22,12 @@ img {
     overflow: hidden;
 }
 
-.slide-container {
+.slider-container {
     position: relative;
     height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
 }
 
 .slides {
@@ -107,16 +110,31 @@ label {
         width: 2vw;
         height: 2vw;
     }
+    .slider-container {
+        gap: 2vw;
+    }
 }
-@media (max-width: 456px) {
+@media (max-width: 520px) {
+    .slider-container {
+        gap: 3vw;
+    }
     h1 {
         font-size: 4vw;
     }
     .text {
-        font-size: 4vw;
+        font-size: 5vw;
     }
-    label {
-        width: 3vw;
-        height: 3vw;
+    .nav-and-text-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2vw;
+    }
+    .text-container {
+        padding-left: 35%;
+        grid-row: 2;
+    }
+    .nav-container {
+        grid-row: 1;
+        justify-content: center;
+        gap: 1vw;
     }
 }
