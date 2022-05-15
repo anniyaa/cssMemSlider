@@ -3,9 +3,11 @@ body {
     padding: 0;
     background-color: #EED7CE;
     color: #FF87CA;
+    font-family: 'Baloo 2', cursive;
 }
 h1 {
-
+    font-size: 2vw;
+    margin-left: 35%;
 }
 
 img {
@@ -16,14 +18,13 @@ img {
 .wrapper-container {
     width: 50%;
     height: 50%;
-    background-color: #EAEAEA;
-    margin: 10% auto;
+    margin: 2% auto;
     overflow: hidden;
 }
 
 .slide-container {
     position: relative;
-    height: 60vh;
+    height: 50%;
 }
 
 .slides {
@@ -49,6 +50,7 @@ input {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: #EED7CE;
 }
 
 .text-container {
@@ -59,15 +61,17 @@ input {
 }
 .text {
     width: 25%;
+    font-size: 2vw;
+    transition: all 0.7s ease;
 }
 
 label {
     cursor: pointer;
     display: inline-block;
-    height: 10px;
-    width: 10px;
+    height: 1vw;
+    width: 1vw;
     border-radius: 50%;
-    background-color: #FFC4E1;
+    background-color: #FF87CA;
 }
 
 #input-1:checked ~ .slides>.slide1,#input-1:checked ~ .nav-and-text-container>.text-container>.text1 {
@@ -82,4 +86,37 @@ label {
 
 #input-4:checked ~ .slides>.slide1,#input-4:checked ~ .nav-and-text-container>.text-container>.text1 {
     margin-left: -75%;
+}
+@media (max-width: 1902px) {
+    .wrapper-container {
+        margin: 5% auto;
+    }
+}
+
+@media (max-width: 1280px) {
+    .wrapper-container {
+        width: 80%;
+    }
+    h1 {
+        font-size: 3vw;
+    }
+    .text {
+        font-size: 3vw;
+    }
+    label {
+        width: 2vw;
+        height: 2vw;
+    }
+}
+@media (max-width: 456px) {
+    h1 {
+        font-size: 4vw;
+    }
+    .text {
+        font-size: 4vw;
+    }
+    label {
+        width: 3vw;
+        height: 3vw;
+    }
 }
