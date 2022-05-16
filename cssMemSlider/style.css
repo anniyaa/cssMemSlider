@@ -23,7 +23,6 @@ img {
 }
 
 .slider-container {
-    position: relative;
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -75,8 +74,13 @@ label {
     width: 1vw;
     border-radius: 50%;
     background-color: #FF87CA;
-    border: 3px solid #FF87CA;
+    border: 0.3rem solid #FF87CA;
     transition: all 0.3s ease;
+}
+.inner-label {
+    height: 4vw;
+    width: 4vw;
+    transform: translate(-30%,-30%);
 }
 
 #input-1:checked ~ .slides>.slide1,#input-1:checked ~ .nav-and-text-container>.text-container>.text1 {
@@ -95,29 +99,29 @@ label {
 
 label:hover {
     background-color: #EAEAEA;
-    border: 3px solid #EAEAEA;
+    border: 0.3rem solid #EAEAEA;
 }
 
 #input-1:checked ~ .nav-and-text-container>.nav-container>.label1 {
     background-color: #EED7CE;
     cursor: auto;
-    border: 3px solid #FF87CA;
+    border: 0.3rem solid #FF87CA;
 }
 #input-2:checked ~ .nav-and-text-container>.nav-container>.label2 {
     background-color: #EED7CE;
     cursor: auto;
-    border: 3px solid #FF87CA;
+    border: 0.3rem solid #FF87CA;
 }
 #input-3:checked ~ .nav-and-text-container>.nav-container>.label3 {
     background-color: #EED7CE;
     cursor: auto;
-    border: 3px solid #FF87CA;
+    border: 0.3rem solid #FF87CA;
 }
 
 #input-4:checked ~ .nav-and-text-container>.nav-container>.label4 {
     background-color: #EED7CE;
     cursor: auto;
-    border: 3px solid #FF87CA;
+    border: 0.3rem solid #FF87CA;
 }
 
 @media (max-width: 1902px) {
@@ -143,6 +147,10 @@ label:hover {
     .slider-container {
         gap: 2vw;
     }
+    .inner-label {
+        height: 6vw;
+        width: 6vw;
+    }
 }
 @media (max-width: 520px) {
     .slider-container {
@@ -165,6 +173,10 @@ label:hover {
     .nav-container {
         grid-row: 1;
         justify-content: center;
-        gap: 1vw;
+        gap: 4vw;
+    }
+    .inner-label {
+        height: 7vw;
+        width: 7vw;
     }
 }
